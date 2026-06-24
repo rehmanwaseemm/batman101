@@ -1,0 +1,25 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isAllowedUser() {
+      return request.auth != null
+        && request.auth.uid in [
+          'YOUR_UID_HERE',
+          'HER_UID_HERE'
+        ];
+    }
+
+    match /journalNotes/{noteId} {
+      allow read, create, update, delete: if isAllowedUser();
+    }
+
+    match /futureDreams/{dreamId} {
+      allow read, create, update, delete: if isAllowedUser();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
