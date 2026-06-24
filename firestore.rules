@@ -5,8 +5,8 @@ service cloud.firestore {
     function isAllowedUser() {
       return request.auth != null
         && request.auth.uid in [
-          'YOUR_UID_HERE',
-          'HER_UID_HERE'
+          'FfqHISqWHQNF6Ik1OPR2lsjO0ND3',
+          'TyLKfnaRZigLcgzcza6v1B9wCid2'
         ];
     }
 
