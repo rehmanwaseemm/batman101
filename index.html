@@ -40,7 +40,15 @@
 </main><footer class="footer">Made for us with GitHub Pages and Firebase Auth. Song path: public/music/our-song.mp3</footer></div>
 <script>
 const STORAGE_KEY='ourworld.';
-const firebaseConfig={apiKey:'YOUR_API_KEY',authDomain:'YOUR_AUTH_DOMAIN',projectId:'YOUR_PROJECT_ID',storageBucket:'YOUR_STORAGE_BUCKET',messagingSenderId:'YOUR_MESSAGING_SENDER_ID',appId:'YOUR_APP_ID'};
+const firebaseConfig = {
+  apiKey: "AIzaSyCJdeUVYopIEdYJNL7bBGxFl-lNHYFd94g",
+  authDomain: "batman101-109cc.firebaseapp.com",
+  projectId: "batman101-109cc",
+  storageBucket: "batman101-109cc.firebasestorage.app",
+  messagingSenderId: "1025995124914",
+  appId: "1:1025995124914:web:7123804d865fd0b16599ab",
+  measurementId: "G-CV3K974N9F"
+};
 const firebaseReady=Object.values(firebaseConfig).every(v=>typeof v==='string'&&!/^YOUR_/.test(v));
 const $=id=>document.getElementById(id);
 const legacyGet=(key,def)=>{try{return JSON.parse(localStorage.getItem(STORAGE_KEY+key))||def}catch{return def}};
